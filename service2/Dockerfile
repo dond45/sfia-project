@@ -1,6 +1,6 @@
 FROM python:3.7
 WORKDIR /app
 RUN pip install Flask
-COPY app.py .
-EXPOSE 5000
+COPY . .
+EXPOSE 5001
 ENTRYPOINT ["python", "app.py"]
