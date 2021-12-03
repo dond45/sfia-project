@@ -1,0 +1,5 @@
+Flask=latest
+Flask-SQLAlchemy=latest
+SQLAlchemy:latest
+pymysql:latest
+requests
