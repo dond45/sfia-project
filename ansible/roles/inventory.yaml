@@ -1,0 +1,10 @@
+all:
+  children:
+    test:
+      hosts:
+        130.211.96.3:
+        34.140.4.46:
+        35.210.190.190:
+      vars:
+        ansible_user: USER
+        ansible_ssh_private_key_file: '~/.ssh/ansible_id_rsa'
