@@ -1,15 +1,10 @@
 version: "3.8"
+
 services:
-    database:
-    container_name: database
-    image: 
-    build: ./database
-    deploy:
-      replicas: 3
+
   nginx:
-    container_name: nginx
     image: nginx:alpine
-    container_name: nginx:latest
+    # container_name: nginx1:latest
     ports:
       - target: 80
         published: 80
@@ -17,28 +12,44 @@ services:
       - type: bind
         source: ./nginx.conf
         target: /etc/nginx/nginx.conf
+
   service1:
     container_name: service1
     image: service1:latest
-    build: ./service1
-    # environment:
-    #   PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    build: ./frontend
+    ports:
+      - target: 5000
+        published: 5000
+    # deploy:
+    #   replicas: 3
+
   service2:
     container_name: service2
     image: service2:latest
     build: ./service2
-    deploy:
-      replicas: 3
+    ports:
+      - target: 5001
+        published: 5001
+    # deploy:
+    #   replicas: 3
+
   service3:
     container_name: service3
     image: service3:latest
     build: ./service3
-    deploy:
-      replicas: 3
+    ports:
+      - target: 5002
+        published: 5002
+    # deploy:
+    #   replicas: 3
+
   service4:
     container_name: service4
     image: service4:latest
     build: ./service4
-    deploy:
-      replicas: 3
+    ports:
+      - target: 5003
+        published: 5003
+    # deploy:
+    #   replicas: 3
   
