@@ -9,8 +9,8 @@ from application import app
 @app.route('/', methods=['GET'])
 def home():
     name_gen = requests.get('http://service2:5000/service2/name_gen')
-    number_gen = requests.get('http://service3:5001/service3/number_gen')
-    prize_gen = requests.post('http://service4:5002/service4/prize_gen', data=prize_gen.text)
+    number_gen = requests.get('http://service3:5000/service3/number_gen')
+    prize_gen = requests.post('http://service4:5000/service4/prize_gen', data=prize_gen.text)
     prize_generator = Event(name_gen=name_gen.text, number_gen=number_gen.text, prize_gen=prize_gen.text)
     db.session.add(prize_generator)
     db.session.commit()
