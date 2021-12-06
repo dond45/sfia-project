@@ -1,0 +1,10 @@
+risk assessment for sfia-project
+
+a major hazard is the app currently not operating due to api issues, this is a DevOps issuse with high impact on the overall applicaiton. this issue would be addressed as a matter of urgency pre releace
+
+vm maintainance - another severe issue that would cause problems later down the line is if any of the virual machines goes down, particularly one containing the load balancer. this is a devops issue that would require regular maintainance in the future.
+
+the lack of local resources including images and files has the potential to cause an issue in any adverse offsite event, this would be a provider issue that would require immediate attention.
+
+the storing of credentials would reuired more vigorous security in future. this is a devops issue.
+
