@@ -24,9 +24,9 @@ services:
     #   replicas: 3
 
   service2:
-    container_name: service2
+    container_name: service2-api
     image: service2:latest
-    build: ./service2
+    build: ./service2-api
     ports:
       - target: 5001
         published: 5001
@@ -34,9 +34,9 @@ services:
     #   replicas: 3
 
   service3:
-    container_name: service3
+    container_name: service3-api
     image: service3:latest
-    build: ./service3
+    build: ./service3-api
     ports:
       - target: 5002
         published: 5002
@@ -44,9 +44,9 @@ services:
     #   replicas: 3
 
   service4:
-    container_name: service4
+    container_name: service4-api
     image: service4:latest
-    build: ./service4
+    build: ./service4-api
     ports:
       - target: 5003
         published: 5003
