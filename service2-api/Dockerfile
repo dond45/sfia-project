@@ -5,5 +5,5 @@ RUN pip install requests
 RUN pip install Response
 
 COPY . .
-EXPOSE 5001
+EXPOSE 5000
 ENTRYPOINT ["python", "app.py"]

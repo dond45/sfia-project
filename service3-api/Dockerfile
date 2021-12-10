@@ -5,5 +5,5 @@ RUN pip install requests
 RUN pip install flask_sqlalchemy
 
 COPY . .
-EXPOSE 5002
+EXPOSE 5000
 ENTRYPOINT ["python", "app.py"]

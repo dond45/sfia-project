@@ -4,5 +4,5 @@ RUN pip install Flask
 RUN pip install requests
 
 COPY . .
-EXPOSE 5003
+EXPOSE 5000
 ENTRYPOINT ["python", "app.py"]
