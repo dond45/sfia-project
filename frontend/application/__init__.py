@@ -1,5 +1,5 @@
 from flask import Flask
-from application.models import prize_generator
+# from application.models import prize_generator
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask (__name__)

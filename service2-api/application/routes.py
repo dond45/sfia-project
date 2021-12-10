@@ -1,7 +1,9 @@
-from application import app
+
 from flask import Flask, request, Response
 import requests
 import random
+
+from application import app
 
 @app.route('/service2/name_gen', methods=['GET'])
 def name_gen():

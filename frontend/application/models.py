@@ -15,4 +15,4 @@ class prize_generator(db.Model):
     prize = db.Column(db.String, nullable=False)
 
     def __repr__(self):
-        return f"{self.name_gen}: { self.number_gen}: {self.prize_gen}"
+        return f"{self.name}: { self.number}: {self.prize}"

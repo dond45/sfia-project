@@ -1,10 +1,11 @@
 from flask import Flask, Response, request, render_template
 from flask_sqlalchemy import SQLAlchemy
 import requests
-from application.models import prize_generator
+# from application.models import prize_generator
 from random import random
 
 from application import app
+
 from application import db
 
 @app.route('/', methods=['GET'])
@@ -14,15 +15,15 @@ def home():
     prize_gen = requests.post('http://service4-api:5000', data=name_gen.text+','+number_gen.text)
     
 
-    last_five_prizes = prize_generator.query.all()
-    db.session.add(
-        prize_generator(
-            name = name.text,
-            number = number.text,
-            prize = prize.text 
-        )
-    )
-    db.session.commit()
+    # last_five_prizes = prize_generator.query.all()
+    # db.session.add(
+    #     prize_generator(
+    #         name = name.text,
+    #         number = number.text,
+    #         prize = prize.text 
+    #     )
+    # )
+    # db.session.commit()
 
     # eventor = Event.query.order_by(prize_generator.id.desc()).all()
 
